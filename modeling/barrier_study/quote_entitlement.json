@@ -1,0 +1,4 @@
+{
+  "historical_quotes_access": false,
+  "reason": "Massive HTTP 403 on /v3/quotes/AAPL; credentials and URL redacted"
+}

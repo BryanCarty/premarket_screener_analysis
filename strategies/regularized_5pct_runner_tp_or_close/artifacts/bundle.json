@@ -1,0 +1,8 @@
+{
+  "model_sha256": "69c38e3f41a019c8885b09ae4535646c51e72ce9885429540ee7278cbbd24e61",
+  "source_model": "modeling/results_regularized_5pct_close/model.joblib",
+  "strategy": "regularized_5pct_runner_tp_or_close",
+  "cutoff": 0.688697686467451,
+  "target_pct": 5,
+  "feature_cutoff": "09:45 America/New_York"
+}

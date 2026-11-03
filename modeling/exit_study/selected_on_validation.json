@@ -1,0 +1,19 @@
+{
+  "period": "threshold",
+  "policy": "time60_only",
+  "cohort": "matched_verifiable",
+  "signals": 29,
+  "trades_evaluated": 11,
+  "unverifiable_trades": 1,
+  "missing_path_trades_used": 0,
+  "ambiguous_bars": 0,
+  "mean_gross_pct": 32.160730751771915,
+  "mean_net_50bps_pct": 31.660730751771915,
+  "median_net_50bps_pct": 11.169793621013124,
+  "win_rate_net": 1.0,
+  "worst_net_pct": 4.192378328741964,
+  "day_bootstrap_low": 11.3217517364476,
+  "day_bootstrap_high": 60.594361308356895,
+  "mean_net_100bps_pct": 31.160730751771915,
+  "mean_net_200bps_pct": 30.160730751771915
+}

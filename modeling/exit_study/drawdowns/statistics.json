@@ -1,0 +1,115 @@
+{
+  "trade_window": {
+    "n_pairs": 17,
+    "mfe": {
+      "minimum": 3.424657534246589,
+      "q25": 5.000000000000004,
+      "median": 5.000000000000004,
+      "q75": 5.000000000000004,
+      "maximum": 5.000000000000004,
+      "mean": 4.907332796132156
+    },
+    "mae": {
+      "minimum": 0.0,
+      "q25": 1.0950194277640435,
+      "median": 3.0954879328436435,
+      "q75": 4.666666666666675,
+      "maximum": 21.232876712328775,
+      "mean": 4.264749079432172
+    },
+    "paired_mean_difference_pp": 0.6425837166999842,
+    "paired_median_difference_pp": 1.904512067156361,
+    "cluster_bootstrap_mean_difference_95ci_pp": [
+      -2.4034296808144733,
+      2.5751164955120087
+    ],
+    "ecdf_distance": 0.7058823529411765,
+    "p_value": 0.00341796875,
+    "clusters": 15,
+    "exact_permutations": 32768,
+    "pairs_high_larger": 13,
+    "pairs_low_larger": 4,
+    "pairs_tied": 0,
+    "paired_sign_test_diagnostic_unadjusted": 0.049041748046875,
+    "holm_adjusted_p_value": 0.0068359375
+  },
+  "full_session": {
+    "n_pairs": 8,
+    "mfe": {
+      "minimum": 3.424657534246589,
+      "q25": 33.42249215225294,
+      "median": 37.10006558505091,
+      "q75": 55.43234325285158,
+      "maximum": 110.4534440983039,
+      "mean": 47.14811876806155
+    },
+    "mae": {
+      "minimum": 0.687858683707121,
+      "q25": 7.172909210954625,
+      "median": 10.0653578973753,
+      "q75": 16.458008207618057,
+      "maximum": 37.2093023255814,
+      "mean": 13.316979421536328
+    },
+    "paired_mean_difference_pp": 33.83113934652522,
+    "paired_median_difference_pp": 27.668088557971302,
+    "cluster_bootstrap_mean_difference_95ci_pp": [
+      1.8974773260182716,
+      58.23522866350717
+    ],
+    "ecdf_distance": 0.75,
+    "p_value": 0.1875,
+    "clusters": 6,
+    "exact_permutations": 64,
+    "pairs_high_larger": 6,
+    "pairs_low_larger": 2,
+    "pairs_tied": 0,
+    "paired_sign_test_diagnostic_unadjusted": 0.2890625,
+    "holm_adjusted_p_value": 0.1875
+  },
+  "exit_minute_mae_lower_sensitivity": {
+    "n_pairs": 17,
+    "ecdf_distance": 0.7058823529411765,
+    "p_value": 0.00341796875,
+    "clusters": 15,
+    "exact_permutations": 32768
+  },
+  "all_observed_trade_windows": {
+    "n_pairs": 19,
+    "mfe": {
+      "minimum": 3.424657534246589,
+      "q25": 5.000000000000004,
+      "median": 5.000000000000004,
+      "q75": 5.000000000000004,
+      "maximum": 5.000000000000004,
+      "mean": 4.859965492594771
+    },
+    "mae_upper": {
+      "minimum": 0.0,
+      "q25": 1.1193487943417901,
+      "median": 3.5992801439712063,
+      "q75": 7.259900396191405,
+      "maximum": 21.232876712328775,
+      "mean": 5.079291684017597
+    }
+  },
+  "all_observed_full_sessions": {
+    "n_pairs": 19,
+    "mfe": {
+      "minimum": 3.424657534246589,
+      "q25": 10.029128685412402,
+      "median": 29.04861839804127,
+      "q75": 43.48605863503755,
+      "maximum": 110.4534440983039,
+      "mean": 32.204890207086635
+    },
+    "mae": {
+      "minimum": 0.687858683707121,
+      "q25": 4.298115315953721,
+      "median": 8.396551724137924,
+      "q75": 16.210853131749463,
+      "maximum": 37.2093023255814,
+      "mean": 11.352327090147071
+    }
+  }
+}

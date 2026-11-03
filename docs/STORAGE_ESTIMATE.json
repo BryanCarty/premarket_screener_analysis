@@ -1,0 +1,9 @@
+{
+  "target_sessions": 501,
+  "warmup_sessions": 10,
+  "pilot_days_measured": 11,
+  "estimated_transfer_bytes": 10272581064,
+  "estimated_retained_summary_bytes": 77853312,
+  "pilot_final_feature_label_bytes": 78259,
+  "caution": "Transfer and retained-summary estimates use measured pilot day averages. Final eligible row counts and dataset bytes vary materially by date. ExFAT allocation overhead is larger than logical file sizes."
+}

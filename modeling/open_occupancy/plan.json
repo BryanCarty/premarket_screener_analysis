@@ -1,0 +1,14 @@
+{
+  "target": "Percent of 15 one-minute closes in [09:30,09:45) strictly above observed 09:30 minute open. Exact target requires all 15 candles; unknown labels remain in scoring cohort.",
+  "auxiliary_target": "Percent of 15 minute lows strictly above opening price; saved only, not optimized.",
+  "opportunity_set": "Rebuild market-wide historical CS/ADRC securities, not the earlier first15-turnover-selected cohort. At cutoff, require PM gap >=10%, PM RVOL >=5 against previous10 same-cutoff sessions, ten matched historical identities, and same-identity prior regular-session grid with every minute (including early closes).",
+  "timing": {"primary":"delayed_0914: bars starting before 09:14, completed by 09:14. A 15-minute delay leaves about one minute before the 09:30 research entry.","secondary":"realtime_0929: bars starting before 09:29. Requires timely real-time data; not deployable at the open on the current delayed feed."},
+  "execution_caveat": "09:30 minute open is a historical reference, not a guaranteed broker/auction fill. No actual receipt-time or broker-deadline reconstruction is claimed.",
+  "features": "Pre-cutoff PM and last30/15/5 price/volume/transaction/volatility/VWAP/shape features; optional prior-session and prior-ten-session statistics including past opening occupancy, and pre-cutoff SPY/QQQ-relative returns. No current opening price, volume, price action or candle completeness in features or eligibility.",
+  "split": "Reuse original train/validation/test calendar splits and two embargo dates, without recomputing boundaries after filtering. Test dates were viewed previously.",
+  "models": ["training_mean","training_median","regularized_ridge","fractional_logistic","shallow_HGB_absolute_loss","shallow_HGB_squared_loss"],
+  "selection": "Fit training only. Primary forecast chooses minimum validation RMSE to target numerical percentage prediction; MAE also reported. Separate precision companion chooses maximum validation top20% Wilson lower bound for >=80% occupancy, with RMSE tie-break. No refit after selection.",
+  "precision_policy": "High occupancy means >=12/15 closes above entry. Validation cutoff needs >=80% conservative precision, >=25 calls over >=10 dates, Wilson lower >=65%; otherwise disclose research fallback. Unknown selected targets count against precision. Predicted occupancy is not a class probability.",
+  "baselines": ["training_mean","training_median","previous_day_occupancy","previous10_session_mean_occupancy"],
+  "reporting": "Report all eligible and exact-label counts, MAE/RMSE/R2/Spearman, calibration, fraction within one candle, and top5/10/20 precision/counts/unknowns. Timing cohorts can differ; include a common-cohort diagnostic. No profit is inferred from occupancy alone. Existing paper strategy unchanged."
+}

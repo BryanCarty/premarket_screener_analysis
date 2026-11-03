@@ -1,0 +1,27 @@
+{
+  "ticker_news": {
+    "access": true,
+    "sample_rows": 1,
+    "fields": [
+      "id",
+      "publisher",
+      "title",
+      "author",
+      "published_utc",
+      "article_url",
+      "tickers",
+      "image_url",
+      "description",
+      "keywords",
+      "insights"
+    ]
+  },
+  "benzinga_earnings": {
+    "access": false,
+    "reason": "Massive HTTP 403 on /benzinga/v1/earnings; credentials and URL redacted"
+  },
+  "benzinga_news": {
+    "access": false,
+    "reason": "Massive HTTP 403 on /benzinga/v2/news; credentials and URL redacted"
+  }
+}

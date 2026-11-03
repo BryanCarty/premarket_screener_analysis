@@ -1,0 +1,14 @@
+[Unit]
+Description=Regularized 5 percent runner Massive paper strategy
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/media/bryan/External HD/premarket_screener
+ExecStart=/home/bryan/.cache/premarket-screener-venv/bin/python -u "/media/bryan/External HD/premarket_screener/strategies/regularized_5pct_runner_tp_or_close/paper_trade.py" daemon
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=default.target

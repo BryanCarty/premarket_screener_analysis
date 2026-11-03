@@ -1,0 +1,8 @@
+{
+  "scope": "The same 19 later-period stock-day signals, TP +5% or session close, no stop. No winner-only filtering.",
+  "primary_comparison": "Within-entry-to-exit MFE (maximum gain from entry) vs absolute MAE, using conservative exit-minute MAE upper bound; only complete pre-exit minute grids.",
+  "secondary_comparison": "Uncapped 09:45-to-close MFE vs absolute MAE; only complete full-session minute grids. No post-exit observations included in actual-trade drawdowns.",
+  "test": "Two-sided exact paired, cluster-preserving label-swap test of a KS-style empirical CDF distance. Clusters connect either shared trading date or ticker. Holm adjust the two planned distribution tests.",
+  "diagnostics": "Cluster-bootstrap mean-difference interval; exact paired sign-test diagnostic (unadjusted, treats rows independent); observed-bar and missing-path sensitivities explicitly descriptive.",
+  "limits": "Exit is selected by reaching +5%, mechanically censoring favorable excursions. Tests are descriptive, not evidence of independent strategy edge. Low/high order inside minutes is unknown. Missing paths are observed estimates only."
+}

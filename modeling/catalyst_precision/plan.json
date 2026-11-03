@@ -1,0 +1,19 @@
+{
+  "primary_metric": "conservative upside-first precision and its Wilson lower 95% confidence bound; unknown selected outcomes remain in denominator",
+  "universe": "Existing 812 qualified stock-days with prior-day regular candle completeness and sufficient prior volatility history; no cohort expansion based on outcome",
+  "feature_cutoff_et": "09:45",
+  "entry_et": "10:05",
+  "entry_sensitivity_et": "10:15",
+  "timing_assumption": "15-minute feed delay plus 5-minute collection/decision budget; hypothetical next-minute entry after a 10:04 decision. This is not archived actual receipt timing or a replay of the sequential live scanner.",
+  "outcome": "First up/down +/-1 prior sigma20 log-price barrier within 60 minutes of entry, otherwise timeout. Missing or same-minute ambiguous paths remain unknown.",
+  "news": "Standard Massive ticker news; query from earlier of prior regular close or 72 hours before cutoff; primary catalysts must be published since prior close and strictly before 09:45. Headline-only deterministic taxonomy; no sentiment/description, publisher quality score or structured surprise fields. Publication timestamps do not establish historical ingestion/update availability.",
+  "segments": ["all","headline_positive","financing","no_classified_fresh_event","continuation","failed_breakout","positive_continuation"],
+  "feature_sets": ["price","price_news"],
+  "models": ["regularized_logistic_C0.1","shallow_HGB_3leaves_min40_L2_30_iter80"],
+  "model_selection": "Three expanding chronological folds entirely inside original training calendar. Fit first 150/200/250 sessions, embargo next session, validate following sessions through 200/250/300. Rank top20% within each fold (ties retained). Choose highest pooled conservative Wilson lower bound with >=20 calls across >=10 dates; AP breaks ties. Fit final candidate only on original training period.",
+  "threshold_selection": "Original 124-session validation period only; largest call set with >=80% conservative precision, >=25 calls across >=10 dates, Wilson lower bound >=65%. Otherwise disclose supported research-only fallback; no policy if support insufficient.",
+  "economic_gate": "Positive validation mean return after 0.5 percentage-point round-trip cost, and no resolved validation gross loss worse than -10%, in addition to precision gate",
+  "ranking_diagnostics": "Top 5%,10%,20% of each evaluation cohort are descriptive ranking metrics, not directly deployable cutoffs; include ties, counts, dates and unknowns.",
+  "final_confirmation": "July 15–October 28 2026 is already viewed and exploratory. Freeze artifact/protocol and require 60 future sessions and >=50 resolved signals without retuning before considering deployment; no real orders or live-model replacement in this experiment. No future-confirmed model is claimed.",
+  "no_short_execution": "Failed-breakout subgroup remains a long-entry diagnostic. No short P&L without borrow/locate and short execution data."
+}
