@@ -9,3 +9,4 @@ What features are important?
 - Company Market Cap
 - Float
 - Relative volatility
+- Relative Volume
