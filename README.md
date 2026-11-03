@@ -1,6 +1,6 @@
 # Premarket Screener Analysis
 
-Exploratory data analysis on premarket stock features.
+Exploratory data analysis on premarket stock features
 
 Question: Are runners predictable?
 
